@@ -1,0 +1,21 @@
+k/* 1. Global selection override */
+@define-color selected_bg_color #{{colors.primary.default.hex_stripped}};
+@define-color selected_fg_color #{{colors.on_primary.default.hex_stripped}};
+
+/* 2. Thunar specific selectors */
+ThunarIconView:selected, 
+ThunarIconView:active,
+ThunarTreeView:selected,
+ThunarTreeView:active,
+.sidebar:selected,
+.view:selected,
+selection {
+    background-color: #{{colors.primary.default.hex_stripped}} !important;
+    color: #{{colors.on_primary.default.hex_stripped}} !important;
+}
+
+/* 3. Box highlight in Thunar's grid */
+ExoIconView:selected {
+    background-color: #{{colors.primary.default.hex_stripped}} !important;
+    border-radius: 4px;
+}

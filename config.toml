@@ -1,0 +1,68 @@
+[config]
+reload_apps = true
+default_type = "dark" 
+
+[cache]
+enabled = true
+
+[config.reload_apps_list]
+kitty = true
+gtk_theme = true
+dunst = true
+
+[templates.hyprland]
+input_path = '~/.config/matugen/templates/hyprland.conf'
+output_path = '~/.config/hypr/colors.conf'
+
+[templates.kitty]
+input_path = '~/.config/matugen/templates/kitty.conf'
+output_path = '~/.config/kitty/colors.conf'
+
+[templates.wofi]
+input_path = '~/.config/matugen/templates/wofi.css'
+output_path = '~/.config/wofi/colors.css'
+
+[templates.gtk3]
+input_path = '~/.config/matugen/templates/gtk.css'
+output_path = '~/.config/gtk-3.0/gtk.css'
+
+[templates.gtk4]
+input_path = '~/.config/matugen/templates/gtk.css'
+output_path = '~/.config/gtk-4.0/gtk.css'
+
+[templates.rofi]
+input_path = '~/.config/matugen/templates/rofi.rasi'
+output_path = '~/.config/rofi/colors.rasi'
+
+[templates.yazi]
+input_path = '~/.config/matugen/templates/yazi-theme.toml'
+output_path = '~/.config/yazi/theme.toml'
+
+[templates.conky]
+input_path = '~/.config/matugen/templates/conky.conf'
+output_path = '~/.config/conky/conky.conf'
+
+[templates.oomox]
+input_path = '~/.config/matugen/templates/oomox.colors'
+output_path = '~/.cache/matugen/oomox-matugen.colors'
+post_hook = '/home/ppk/.config/scripts/recolor-icons.sh'
+
+[templates.oomox_gtk]
+input_path = '~/.config/matugen/templates/oomox-gtk-colors'
+output_path = '~/.cache/matugen/oomox-gtk-colors'
+
+[templates.hyprlock]
+input_path = '~/.config/matugen/templates/hyprlock.conf'
+output_path = '~/.cache/matugen/hyprlock-vars.conf'
+
+[hooks]
+post_command = "bash ~/.config/scripts/update_cursor.sh"
+
+[templates.cursor]
+input_path = '~/.config/matugen/templates/cursor_colors.sh'
+output_path = '~/.cache/matugen/cursor_colors.sh'
+
+[templates.dunst]
+input_path = '~/.config/matugen/templates/dunst.conf'
+output_path = '~/.cache/matugen/dunst.conf'
+post_hook = 'cp ~/.cache/matugen/dunst.conf ~/.config/dunst/dunstrc.d/99-matugen.conf && killall dunst; dunst &'

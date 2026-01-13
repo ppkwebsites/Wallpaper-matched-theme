@@ -1,0 +1,4 @@
+<svg ...>
+  <path fill="{{colors.primary.default.hex}}" d="..." /> 
+  <path stroke="{{colors.on_primary.default.hex}}" d="..." />
+</svg>
